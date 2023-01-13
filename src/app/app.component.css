@@ -1,0 +1,117 @@
+mat-toolbar {
+    justify-content: space-between;
+}
+
+.content {
+    padding: 20px;
+}
+
+.content > mat-card {
+    margin-bottom: 16px;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-container {
+    /* width: 200px; */
+    /* height: 300px; */
+}
+
+.card-container img.mat-mdc-card-image {
+    position: relative;
+}
+
+.card-container span.rank {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #673ab7;
+    padding: 4px 8px;
+    color: #fff;
+    border-bottom-left-radius: 5px;
+}
+
+/* custom css */
+.custom-grid ul {
+    margin: 0px -10px;
+    text-align: center;
+    padding-left: 0px;
+}
+
+.custom-grid ul li {
+    padding: 0px 10px;
+    display: inline-block;
+    height: 300px;
+    list-style-type: none;
+    margin-bottom: 20px;
+    transform: scale(1);
+    transition: all 100ms linear 0s;
+}
+.custom-grid ul li:hover {
+    transform: scale(1.2);
+    position: relative;
+    z-index: 2;
+}
+
+.hover-content {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    padding: 0 10px 10px;
+    display: none;
+    background: #fff;
+    border-radius: 0 0 4px 4px;
+    text-align: left;
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+}
+.hover-content p {
+    margin: 4px 0px;
+}
+.custom-grid ul li:hover .hover-content {
+    display: block;
+}
+.custom-grid ul li:hover {
+    font-size: 14px;
+}
+.custom-grid ul li:hover .mat-card {
+    border-radius: 4px 4px 0 0;
+}
+.mat-card {
+    position: relative;
+    padding: 0px;
+    height: 300px;
+    display: block;
+}
+.mat-mdc-card-image {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+}
+.card-title {
+    width: 170px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 2px !important;
+    margin-bottom: 0 !important;
+}
+.mat-mdc-card-content {
+    padding: 5px 10px;
+}
+.mat-card-content {
+    padding: 4px 10px;
+}
+.card-image {
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 4px 4px 0 0;
+}
+
+.chart-container {
+    padding: 20px;
+}

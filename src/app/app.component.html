@@ -1,0 +1,44 @@
+<mat-toolbar color="primary">
+  <span>Anime Ranking</span>
+</mat-toolbar>
+
+<div class="content">
+  <div class="custom-grid">
+    <ul class="clearfix">
+      <li *ngFor="let anime of animeData?.data">
+        <div>
+          <mat-card class="mat-elevation-z4 card-container">
+            <!-- <img mat-card-image src="{{ anime.images.jpg.image_url }}" /> -->
+            <div
+              class="card-image"
+              [style.background-image]="
+                'url(' + anime.images.jpg.image_url + ')'
+              "
+            ></div>
+            <span class="rank">{{ anime.rank }}</span>
+            <mat-card-content class="mat-title-section">
+              <p class="card-title">{{ anime.title | truncate:[100, '...'] }}</p>
+              <!-- <p class="card-title">
+                Fullmetal Alchemist: Brotherhood Fullmetal Alchemist:
+                Brotherhood
+              </p> -->
+              <div class="hover-content">
+                <p><b>Release</b> : {{ anime.aired.from | date }}</p>
+                <p>
+                  <b>Lastest</b> : {{ anime.aired.to | date }}
+                  <!-- <span *ngIf="anime.airing as false">now</span> -->
+                </p>
+                <p><b>Rating</b> : {{ anime.rating }}</p>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div style="clear: both"></div>
+</div>
+<div class="chart-container">
+  <!-- <app-area-chart [parentTitle]="title" [animeChartLevel]="chartLevel" [animeChartValue]="chartValue"></app-area-chart> -->
+  <app-area-chart></app-area-chart>
+</div>
